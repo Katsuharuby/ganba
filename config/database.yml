@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: ganba_production
   username: ganba
   password: <%= ENV['GANBA_DATABASE_PASSWORD'] %>
